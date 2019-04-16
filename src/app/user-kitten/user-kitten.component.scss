@@ -1,0 +1,85 @@
+@import "../../styles/colors.scss";
+@import "../../styles/fonts.scss";
+
+section {
+    display:flex;
+    flex-flow: column;
+    align-items: center;
+    background-color: $ligthGrey;
+    margin-bottom: 30px;
+    min-height : 80vh;
+
+    h2 {
+        text-align:center;
+        font-family: $titleFont;
+        padding-top: 20px;
+    }
+
+    #me {
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        p {
+            font-family: $textFont;
+        }
+
+        #myself {
+            width : 150px;
+            height : 150px;
+            border-radius : 50%
+        }
+
+    }
+
+    ul {
+        list-style: none;
+        padding:0;
+
+        li {
+            background: center no-repeat;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding:0;
+            width:200px;
+            height:150px;
+
+            .kittenDescription{
+                background-color: transparent;
+                font-size: 0;
+            }
+
+            span {
+                color:black;
+                font-family: $textFont;
+            }
+        }
+
+        li:hover {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding:0;
+        }
+
+        li:hover .kittenDescription {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            font-size: 18px;
+            padding:0;
+            color: $ligthGrey;
+            width:100%;
+            height:100%;
+            cursor:pointer;
+            transition: background-color 0.3s ease-out;
+            background-color: #404040;
+            text-align: center;
+        }
+
+    }
+}

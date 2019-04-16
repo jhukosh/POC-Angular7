@@ -1,0 +1,19 @@
+<section id="userKitten">
+  <h2>Me and my kittens</h2>
+  <div id="me">
+      <img src="https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.p8T-Sz9Ll4XI8P3ymRSivQHaGr%26pid%3D15.1&f=1" alt="myself" id="myself">
+      <p>Me, Eric Cartman...</p>
+  </div>
+  <p>...and my lovely kittens !</p>
+  <ul *ngFor="let kitten of kittensAdopted; let i = index">
+      <li class="kittensAdopted justify-content-center" 
+          [ngStyle]="{'background': 'url(' + sendKittenPic(kitten) + ') no-repeat center'}"
+      >
+          <span class="kittenDescription">
+              Name : {{ kitten.name }} <br>
+              Race : {{ kitten.origin }} <br>
+              Birth : {{ kitten.birth }} <br>
+          </span>
+      </li>
+  </ul>
+</section>

@@ -1,0 +1,92 @@
+<div id="mainSection" class="container d-flex flex-column">
+
+  <div class="container d-flex align-items-center flex-column">
+    <h2>Create your own kitten !</h2>
+    <section id="formSection">
+      <form name="kittenForm" #kittenForm=ngForm>
+        <div class="form-group">
+            <label for="name">Kitten name</label>
+            <input 
+              required 
+              type="text" 
+              class="form-control"
+              #name="ngModel" 
+              [class.is-invalid]="name.invalid && name.touched" 
+              id="name" 
+              placeholder="Name" 
+              [(ngModel)]="kittenName" 
+              name="name"
+            >
+        </div>
+
+        <div class="form-group">
+            <label for="race">Kitten race</label>
+            <input 
+              required
+              list="races"
+              class="form-control"
+              #race="ngModel"
+              name="race"
+              [class.is-invalid]="race.invalid && race.touched"
+              id="race"
+              placeholder="Race"
+              [(ngModel)]="kittenRace"
+            >
+            <datalist id="races">
+              <option value="Persian">
+              <option value="Scottish Fold">
+              <option value="Sphynx">
+              <option value="Bengal">
+              <option value="Ragdoll">
+              <option value="Munchkin">
+              <option value="Siamese">
+            </datalist>
+        </div>
+
+        <div class="form-group">
+          <label for="birth">Kitten birthdate</label>
+          <input
+            required
+            type="text" 
+            class="form-control" 
+            #birth="ngModel"
+            name="birth"
+            [class.is-invalid]="birth.invalid && birth.touched"
+            id="birth"
+            placeholder="Birth date"
+            [(ngModel)]="kittenBirth"
+          >
+        </div>
+
+        <div class="form-group">
+            <label for="picture">Kitten picture</label>
+            <input 
+              type="text"
+              class="form-control" 
+              id="picture" 
+              placeholder="Picture" 
+              required 
+              [(ngModel)]="kittenPicture"
+              name="picture"
+            >
+        </div>
+
+        <div id="submitButtonContainer">
+          <button 
+            id="submitButton"
+            [disabled]=!kittenForm.valid
+            type="submit"
+            class="btn btn-lg btn-secondary align-self-center"
+            (click)='addKittenToList()'
+          >Submit</button>
+        </div>
+      </form>
+      
+    </section>
+
+    <div id="checkOutKittens">
+      <a [routerLink]="['/home']">Check out your kittens</a>
+    </div>
+
+  </div>
+</div>

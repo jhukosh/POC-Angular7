@@ -1,0 +1,54 @@
+@import "../../styles/colors.scss";
+@import "../../styles/fonts.scss";
+
+
+#mainSection {
+    margin-top: 50px;
+    margin-bottom:50px;
+    padding-top : 50px;
+    padding-bottom: 50px;
+    background-color: $backgroundGrey;
+    border-radius: 5%;
+
+    #formSection {
+        width : 100%;
+        margin-bottom: 50px;
+    }
+
+    h2 {
+        padding-bottom: 25px;
+        font-family: $titleFont;
+    }
+
+    label, input, .btn {
+        font-family: $textFont;
+    }
+
+    #submitButtonContainer {
+        display: flex;
+        justify-content: center;
+        margin-top : 70px;
+    }
+
+    #checkOutKittens {
+
+        background-color: $rose;
+        padding : 10px;
+
+        a {
+            color: $ligthGrey;
+            font-size : 1.3rem;
+            font-family: $textFont;
+        }
+    }
+
+    #checkOutKittens:hover {
+        background-color: black;
+
+
+        a {
+            text-decoration: none;
+            color: $rose;
+        }
+    }
+}
