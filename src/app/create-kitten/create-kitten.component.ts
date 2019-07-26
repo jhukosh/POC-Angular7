@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 import { Kitten }    from '../kitten';
 import { KittenTransferService } from '../services/kitten-transfer.service';
@@ -8,7 +8,7 @@ import { KittenTransferService } from '../services/kitten-transfer.service';
   templateUrl: './create-kitten.component.html',
   styleUrls: ['./create-kitten.component.scss']
 })
-export class CreateKittenComponent implements OnInit {
+export class CreateKittenComponent {
   kittenName :string;
   kittenRace:string;
   kittenBirth: string;
@@ -18,8 +18,6 @@ export class CreateKittenComponent implements OnInit {
   
   constructor(private kittenTransferService : KittenTransferService) { }
 
-  ngOnInit() {
-  }
 
   // Creating and adding new kitten to list and sending to the service
 
